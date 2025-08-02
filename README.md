@@ -6,5 +6,5 @@ Run your restaurant at a Hong Kong pace.
 latest-original.js -> source file\
 latest.js -> modified file
 
-Current version: 5686
+Current version: 5700
 

@@ -45686,9 +45686,9 @@ var com_shketlabs_games_streetscafe_mail_WorldMailTradeAcceptPopUp = function(in
 		var _userFaceBitmap1 = new com_shketlabs_games_streetscafe_BitmapBatch(this.sender.id);
 		_userFaceBitmap1.getBitmap(this.sender.imageUrl,mc_sender_portrait);
 	} else {
-		tf_sender_name.set_text(this?.sender?.id ?? "null");
+		tf_sender_name.set_text(this.mailItem.mailObject.senderId);
 	}
-	var _friendUser = com_shketlabs_games_streetscafe_GameWorld.getGameUserWithId(this?.sender?.id ?? "null");
+	var _friendUser = com_shketlabs_games_streetscafe_GameWorld.getGameUserWithId(this.mailItem.mailObject.senderId);
 	if(_friendUser != null) {
 		var _req = new com_shketlabs_games_streetscafe_rpc_RpcRequestManager();
 		_req.getFriendsDetails([_friendUser],8,true);
@@ -45828,7 +45828,7 @@ com_shketlabs_games_streetscafe_mail_WorldMailTradeIngredient.prototype = $exten
 			com_shketlabs_games_streetscafe_GameWorld.gameUser.addIngredient(_playerItem,1);
 			com_shketlabs_games_streetscafe_GameWorld.gameUser.getIngredient(_playerItem).lock = true;
 			com_shketlabs_games_streetscafe_GameWorld.gameUser.removeIngredient(_senderItem,1);
-			var _senderUser = com_shketlabs_games_streetscafe_GameWorld.getGameUserWithId(this.sender.id);
+			var _senderUser = com_shketlabs_games_streetscafe_GameWorld.getGameUserWithId(this.mailItem.mailObject.senderId);
 			if(_senderUser != null) {
 				_senderUser.addIngredient(_senderItem,1);
 				_senderUser.getIngredient(_senderItem).lock = true;
