@@ -6,7 +6,7 @@ Run your restaurant at a Hong Kong pace.
 latest-original.js -> source file\
 latest.js -> modified file
 
-Current version: 5700
+Current version: 5701
 
 ### How to use
 Enable Content Overrides

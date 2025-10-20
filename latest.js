@@ -5253,7 +5253,7 @@ var Main = function() {
 	this._appDownloadClicked = false;
 	com_shketlabs_games_streetscafe_Debug.out("Main initialisation");
 	openfl_display_Sprite.call(this);
-	Main.configURL = "https://app.streets.cafe/app_config.json";
+	Main.configURL = "https://app.streets.cafe/app_config.json?1";
 	if(Main.ENV == "dev") {
 		Main.configURL = "https://app.streets.cafe/app_config_dev.json";
 	}
